@@ -42,7 +42,7 @@ const getAllUsers = async (req, res) => {
 
 const getUserById = async (req, res) => {
   try {
-    const user = await userModel.getUserByEmail(req.params.id);
+    const user = await userModel.getUserById(req.params.id);
     if (user) {
       res.json(user);
     } else {
